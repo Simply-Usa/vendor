@@ -1,0 +1,85 @@
+@mixin flex
+  display: flex
+  justify-content: space-between
+  align-items: center
+$parrentColor: #2F343A
+$childColor: #C8A35F
+@import 'fonts'
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+body
+  font-family: "Roboto"
+  background-color: $parrentColor
+  color: #ffffff
+ul
+  list-style: none
+a
+  text-decoration: none
+  color: #ffffff
+.container
+  width: 1110px
+  margin: auto
+  text-align: center
+  // border: 1px solid
+.header
+  background-color: $childColor
+  height: 45px
+  @include flex
+  .header_menu
+    @include flex
+    font-size: 12px
+    width: 1110px
+    margin: auto
+    padding: 0
+  .lang
+    @include flex
+    // color: #ffffff
+    li
+      margin-right: 10px
+      &:last-child
+        margin: 0
+.menu_wrap
+  margin: 27px 0
+  // border: 1px solid
+  font-size: 14px
+  // color: #fff
+  @include flex
+  .menu
+    @include flex
+    width: 412px
+  .logo_menu
+    @include flex
+    p
+      @include flex
+      img
+        margin-right: 10px
+    hr
+      margin: 0 30px
+      height: 46px
+      border: none
+      width: 1px
+      background-color: #fff
+.vendor
+  height: 620px
+  background: url(../img/fura.png)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  padding-top: 155px
+  text-align: center
+  .header_title
+    padding: 45px 71px
+    text-align: center
+    border: $childColor 1px solid
+    width: fit-content
+    margin: auto
+    margin-bottom: 140px
+  h1
+    font-size: 64px
+    letter-spacing: 0.05em
+  p
+    font-size: 18px
+    line-height: 28px
+    margin-top: 20px
